@@ -25,6 +25,7 @@ import AddProduct from '../AddProduct/AddProduct';
 import Pay from '../Pay/Pay';
 import ManageService from '../ManageService/ManageService';
 import './Dashboard.css'
+import Review from '../Review/Review';
 
 const drawerWidth = 200;
 
@@ -88,7 +89,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-           <img className="logo" src={logo} alt="" /> Shome
+           <Link to='/home' className="dash-logo"><img className="logo" src={logo} alt="" /> Shome</Link>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -147,6 +148,9 @@ function Dashboard(props) {
         </Route>
         <Route path={`${url}/allorders`}>
           <ManageService></ManageService>
+        </Route>
+        <Route path={`${url}/review`}>
+          <Review></Review>
         </Route>
       </Switch>
 

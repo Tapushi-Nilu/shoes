@@ -9,6 +9,7 @@ import './Home.css'
 import img1 from '../images/4.png';
 import img2 from '../images/5.png';
 import img3 from '../images/6.png';
+import Showreview from '../Showreview/Showreview';
 
 
 const Home = () => {
@@ -65,7 +66,7 @@ const Home = () => {
         </div>
         </div>
 
-
+        <Showreview></Showreview>
             <Footer></Footer>
         </div>
     );

@@ -12,7 +12,7 @@ const Purchase = () => {
     const [userDetails, setUserDetails] = useState({});
 
     useEffect( () =>{
-        fetch(`http://localhost:5000/products/${serviceId}`)
+        fetch(`https://still-refuge-06425.herokuapp.com/products/${serviceId}`)
         .then(res => res.json())
         .then(data=>setUserDetails(data))
     }, []);
@@ -22,7 +22,7 @@ const Purchase = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://still-refuge-06425.herokuapp.com/orders', {
             method: "POST",
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify(data)

@@ -6,7 +6,7 @@ const Myorder = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-    fetch(`http://localhost:5000/orders?=­${user.email}`)
+    fetch(`https://still-refuge-06425.herokuapp.com/orders?=­${user.email}`)
     .then((res) => res.json())
     .then((data) => setOrders(data))
     //­ .finally(()=> setIsloading(false));
@@ -16,15 +16,15 @@ const Myorder = () => {
         const isConfirm = window.confirm("Are you sure...?");
         console.log(id);
         if (isConfirm) {
-            fetch(`http://localhost:5000/orders/­${id}`, {
+            fetch(`https://still-refuge-06425.herokuapp.com/orders/­${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" }
             })
             .then( res => res.json())
             .then(data => {
                 if (data.deletedCount) {
-                    // const remaining = orders.filter(order => order._id !== id);
-                    // setOrders(remaining);
+                    const remaining = orders.filter(order => order._id !== id);
+                    setOrders(remaining);
                     alert('successfull')
                 }
             })

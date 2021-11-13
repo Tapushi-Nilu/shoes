@@ -11,6 +11,7 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import Dashboard from './component/Dashboard/Dashboard';
 import Purchase from './component/Purchase/Purchase';
+
 import Explore from './component/Explore/Explore';
 
 

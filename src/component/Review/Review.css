@@ -1,0 +1,7 @@
+.review-frm input {
+  border: navajowhite;
+  border-bottom: 1px solid #ddd;
+  padding: 7px;
+  width: 50%;
+  margin: 10px 0px;
+}
