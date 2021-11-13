@@ -21,9 +21,7 @@ const AppointmentBanner = () => {
                    <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                    <img
-                        style={{width:450, marginTop:'-110px'}}
-                     src={images} alt=""/>
+                    <img style={{width:'100%', marginTop:'-110px'}} src={images} alt=""/>
                 </Grid>
                 <Grid item xs={12} md={6} style={{display:'flex', alignItems:'center'}}>
                     <Box>

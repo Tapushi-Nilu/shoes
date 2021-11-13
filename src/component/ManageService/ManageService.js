@@ -4,14 +4,13 @@ import { useForm } from "react-hook-form";
 const ManageService = () => {
 
     const [orders, setOrders] = useState([]);
-    const [status, setStatus] = useState('');
 
     
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
     useEffect( () => {
-        fetch('http://localhost:5000/allorder')
+        fetch('https://still-refuge-06425.herokuapp.com/allorder')
         .then(res => res.json())
         .then(data => setOrders(data)) 
     }, []);
@@ -34,7 +33,7 @@ const ManageService = () => {
                     <th scope="col">Action</th>
                     </tr>
                 </thead>
-                {orders?.map( (pd, index) => {
+                {orders?.map((pd, index) => {
                        <tbody>
                        <tr>
                         <td>{index}</td>

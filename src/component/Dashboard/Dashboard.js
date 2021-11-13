@@ -58,9 +58,9 @@ function Dashboard(props) {
 
       {admin && <Box>
         <br/>
-            <NavLink className="d-menu" to={`${url}/makeadmin`}><Button>Make Admin</Button></NavLink>
-            <NavLink className="d-menu" to={`${url}/allorders`}><Button>Manage All Orders</Button></NavLink><br/>
-            <Link to={`${url}/addproduct`}><Button>Add Products</Button></Link>
+            <NavLink className="d-menu" to={`${url}/allorders`}>Manage All Orders</NavLink><br/>
+            <NavLink className="d-menu" to={`${url}/makeadmin`}>Make Admin</NavLink> <br/>
+            <NavLink className="d-menu" to={`${url}/addproduct`}>Add Products</NavLink> <br/> <br/>
             <button className="log-btn" onClick={logOut} color="inherit">Logout</button>
         </Box>}
     </div>
@@ -134,11 +134,11 @@ function Dashboard(props) {
         {/* <Route exact path={path}>
         <Myorder></Myorder>
         </Route> */}
+        <Route exact path={`${path}/myorders`}>
+            <Myorder></Myorder>
+        </Route>
         <Route path={`${path}/makeadmin`}>
             <MakeAdmin></MakeAdmin>
-        </Route>
-        <Route path={`${url}/myorders`}>
-            <Myorder></Myorder>
         </Route>
         <Route path={`${url}/addproduct`}>
             <AddProduct></AddProduct>

@@ -21,7 +21,7 @@ const AddProduct = () => {
 
     return (
         <div className="add-service">
-        <h1 className="text-center mb-5">Please Add a service</h1>
+        <h1 className="text-center mb-5">Please Add a Product</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
             <input {...register("name", { required: true })} placeholder="Name" />
             <textarea {...register("description")}placeholder="Description"/>

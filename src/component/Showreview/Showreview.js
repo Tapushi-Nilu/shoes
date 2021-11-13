@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../hooks/useAuth';
+import Addreview from '../Addreview/Addreview';
 
 const Showreview = () => {
-    const {user} = useAuth();
 
     const [ showreview, setShowreview] = useState([]);
     useEffect( () => {
@@ -13,19 +12,22 @@ const Showreview = () => {
 
     return (
         <div>
-            {
-                showreview.map( review => {
-                    return(
-                    <div>
-                        <img src={user.photoURL} alt="" />
-                        <h2>{review?.name}</h2>
-                        <h3>{review?.email}</h3>
-                        <p>{review.comments}</p>
+            <div className="text-center mt-5">
+                <h1 style={{fontWeight:'700'}}>Client Feedback</h1>
+                <p>There are many variations of passages of Lorem Ipsum available</p>
+            </div>
 
-                    </div>
-                        )
-                })
-            }
+        <div className="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+                {
+                    showreview.map( review => <Addreview
+                        key={review._id} 
+                        review={review}
+                        ></Addreview>)
+                }
+            </div>
+
+       </div>
         </div>
     );
 };
