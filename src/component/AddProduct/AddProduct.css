@@ -1,0 +1,21 @@
+.add-service {
+  padding: 40px;
+}
+.add-service form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add-service form input,
+textarea {
+  width: 50%;
+  margin-bottom: 12px;
+}
+.btn-sn {
+  background: #333131 !important;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 10px;
+  border: 1px solid #333131;
+}
